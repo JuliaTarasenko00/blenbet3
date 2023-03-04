@@ -33,22 +33,41 @@
 // значення '1', то у змінну result запишемо 'зима', якщо має значення
 // '2' - 'весна' і так далі. Розв'яжіть завдання через switch-case.
 
-const num = prompt("введіть число від 1 до 4");
-let result = "";
-switch (num) {
-    case "1":
-        result = "зима";
-        break;
-    case "2":
-        result = "весна";
-        break;
-    case "3":
-        result = "літо";
-        break;
-    case "4":
-        result = "осінь";
-        break;
-    default:
-        result = "введіть число від 1 до 4";
+// const num = prompt("введіть число від 1 до 4");
+// let result = "";
+// switch (num) {
+//     case "1":
+//         result = "зима";
+//         break;
+//     case "2":
+//         result = "весна";
+//         break;
+//     case "3":
+//         result = "літо";
+//         break;
+//     case "4":
+//         result = "осінь";
+//         break;
+//     default:
+//         result = "введіть число від 1 до 4";
+// }
+// console.log(result);
+
+
+
+//Напишіть цикл, який виводить в консоль
+//числа от max до min по зменьшенню
+//Виведіть в консоль суму усіх парних чисел
+
+
+const min = 0;
+const max = 10;
+let total = 0; 
+for (let i = max; i >= min; i -= 1) {
+    console.log(i);
+    if (i % 2 === 0) {
+        total += i;
+         };
+        
 }
-console.log(result);
+ console.log(total)
