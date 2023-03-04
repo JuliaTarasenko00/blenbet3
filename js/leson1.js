@@ -62,7 +62,7 @@
 
 // const min = 0;
 // const max = 10;
-// let total = 0; 
+// let total = 0;
 // for (let i = max; i >= min; i -= 1) {
 //     console.log(i);
 //     if (i % 2 === 0) {
@@ -111,17 +111,53 @@
 //в іншому випадку виводити рядок "Невірний пароль!"
 
 
-const login = prompt("Введіть логін"); 
-console.log(login);
-if(login ===  "Адмін") {
-   const password = prompt("Введіть пароль");
-   if(password === "Я головний"){
-      alert("вітаю!");
-   } else {
-      alert("Невірний пароль!");
-   }
-} else if (login === "" || login === null) {
-   alert("Скасовано");
-} else {
-   alert("Я вас не знаю");
+// const login = prompt("Введіть логін");
+// console.log(login);
+// if(login ===  "Адмін") {
+//    const password = prompt("Введіть пароль");
+//    if(password === "Я головний"){
+//       alert("вітаю!");
+//    } else {
+//       alert("Невірний пароль!");
+//    }
+// } else if (login === "" || login === null) {
+//    alert("Скасовано");
+// } else {
+//    alert("Я вас не знаю");
+// }
+
+
+
+// В змінній minuteValue є число від 0 до 59.
+// Визначте до якої чверті години входить
+// це число(в першу, другу, треттю чи четверту).
+
+// const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
+
+const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
+console.log(minuteValue);
+if (minuteValue >= 0 && minuteValue <= 15) {
+    console.log("Перша чверть години");
 }
+if (minuteValue > 15 && minuteValue <= 30) {
+    console.log("Друга чверть години");
+}
+if (minuteValue > 30 && minuteValue <= 45) {
+    console.log("Третя чверть години");
+}
+if (minuteValue > 45 && minuteValue <= 60) {
+    console.log("Четверта чверть години");
+}
+
+// HOMEWORK!!!
+//1.Напишіть цикл, який пропонує ввести
+//число більше 100 через prompt.
+//Якщо користувач ввів інше число - попросити
+//ввести ще раз и так далі.
+//Цикл повинен питати число, доки користувач не
+//введе число більше 100, чи не натисне кнопку
+//Cancel в prompt
+
+// 2. Є рядок, який складається із символів, наприклад, 'abcde'.
+// Перевірте, що першим символом цього рядка є літера 'a'.
+// Якщо це так - виведіть 'Так', в іншому випадку - 'Ні'.
