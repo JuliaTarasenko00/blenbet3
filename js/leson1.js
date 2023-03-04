@@ -128,26 +128,51 @@
 
 
 
+// 2 спосіб
+const login = prompt("Введіть логін");
+console.log(login);
+let message = '';
+switch (login) {
+    case 'Адмін':
+             const password = prompt("Введіть пароль");
+        
+            alert(  password === "Я головний"?"вітаю!" : "Невірний пароль!") 
+       
+        break;
+    case '' : 
+        case null:
+        message = "Скасовано";
+        break;
+    default:
+        message = "Я вас не знаю";
+}
+alert(message);
+
+
+
+
+
+
 // В змінній minuteValue є число від 0 до 59.
 // Визначте до якої чверті години входить
 // це число(в першу, другу, треттю чи четверту).
 
 // const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
 
-const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
-console.log(minuteValue);
-if (minuteValue >= 0 && minuteValue <= 15) {
-    console.log("Перша чверть години");
-}
-if (minuteValue > 15 && minuteValue <= 30) {
-    console.log("Друга чверть години");
-}
-if (minuteValue > 30 && minuteValue <= 45) {
-    console.log("Третя чверть години");
-}
-if (minuteValue > 45 && minuteValue <= 60) {
-    console.log("Четверта чверть години");
-}
+// const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
+// console.log(minuteValue);
+// if (minuteValue >= 0 && minuteValue <= 15) {
+//     console.log("Перша чверть години");
+// }
+// if (minuteValue > 15 && minuteValue <= 30) {
+//     console.log("Друга чверть години");
+// }
+// if (minuteValue > 30 && minuteValue <= 45) {
+//     console.log("Третя чверть години");
+// }
+// if (minuteValue > 45 && minuteValue <= 60) {
+//     console.log("Четверта чверть години");
+// }
 
 // HOMEWORK!!!
 //1.Напишіть цикл, який пропонує ввести
@@ -161,3 +186,8 @@ if (minuteValue > 45 && minuteValue <= 60) {
 // 2. Є рядок, який складається із символів, наприклад, 'abcde'.
 // Перевірте, що першим символом цього рядка є літера 'a'.
 // Якщо це так - виведіть 'Так', в іншому випадку - 'Ні'.
+
+
+
+
+
