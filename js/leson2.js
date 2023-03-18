@@ -12,3 +12,21 @@
 // console.log(styles.shift());
 // styles.unshift('Реп','Реггі');
 // console.log(styles);
+
+// ========================================
+
+
+// Напиши функцію, яка перебирає масив логінів і перевіряє
+// чи є ім'я введене в інпут у цьому масиві і у разі,
+// якщо є - виводить повідомлення "Доступ дозволено"
+// в іншому випадку - "Користувач не знайден"
+
+const logins = ["Peter", "John", "Igor", "Sasha"];
+
+function checkLogin (array) {
+    const login = prompt("Введіть логін");
+    if (array.includes(login)) {
+        alert("Доступ дозволено");
+    } else {alert("Користувач не знайден")};
+}
+checkLogin(logins);
