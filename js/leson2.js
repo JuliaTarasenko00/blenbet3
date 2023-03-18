@@ -21,12 +21,29 @@
 // якщо є - виводить повідомлення "Доступ дозволено"
 // в іншому випадку - "Користувач не знайден"
 
-const logins = ["Peter", "John", "Igor", "Sasha"];
+// const logins = ["Peter", "John", "Igor", "Sasha"];
 
-function checkLogin (array) {
-    const login = prompt("Введіть логін");
-    if (array.includes(login)) {
-        alert("Доступ дозволено");
-    } else {alert("Користувач не знайден")};
+// function checkLogin (array) {
+//     const login = prompt("Введіть логін");
+//     if (array.includes(login)) {
+//         alert("Доступ дозволено");
+//     } else {alert("Користувач не знайден")};
+// }
+// checkLogin(logins);
+
+// ------------------------------------------------
+
+// Напишіть функцію logItems (array), яка приймає
+// масив і використовує цикл for, який для кожного елемента
+//буде виводити повідомлення у форматі:
+//<номер елемента> - <значення елемента>
+//Нумерація має починатись з 1
+const logins = ["Peter", "John", "Igor", "Sasha"];
+function logItems(array) {
+    for (let i = 0; i < array.length; i += 1){
+        console.log(`${i+1} - ${array[i]}`);
+   
+    }
+
 }
-checkLogin(logins);
+logItems(logins);
