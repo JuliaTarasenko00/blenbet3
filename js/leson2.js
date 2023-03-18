@@ -134,19 +134,91 @@
 //Функція рахує і повертає загальну вартість каменів
 //з таким ім'ям, ціною та кількістю з об'єкта
 
-const stones = [
-  { name: "Смарагд", price: 1300, quantity: 4 },
-  { name: "Діамант", price: 2700, quantity: 6 },
-  { name: "Сапфір", price: 400, quantity: 7 },
-  { name: "Щебінь", price: 150, quantity: 100 },
-];
-function calcTotalPrice(stones, stonesName) {
-    for (const stone of stones) {
-        if (stone.name === stonesName) {
-            return stone.price * stone.quantity;
-        }
-        
-    }
-}
+// const stones = [
+//   { name: "Смарагд", price: 1300, quantity: 4 },
+//   { name: "Діамант", price: 2700, quantity: 6 },
+//   { name: "Сапфір", price: 400, quantity: 7 },
+//   { name: "Щебінь", price: 150, quantity: 100 },
+// ];
+// function calcTotalPrice(stones, stonesName) {
+//     for (const stone of stones) {
+//         if (stone.name === stonesName) {
+//             return stone.price * stone.quantity;
+//         }
 
-console.log(calcTotalPrice(stones, "Сапфір"));
+//     }
+// }
+
+// console.log(calcTotalPrice(stones, "Сапфір"));
+
+// -----------------------------------------------------
+
+//7. Напишіть скрипт керування особистим кабінетом інтернет банка
+//Є об'єкт account в якому необхідно реалізувати
+//методи для работи з балансом та історією транзакцій
+
+//Типів транзакцій всього два.
+//Можна покласти або зняти гроші з рахунка
+const Transaction = {
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
+};
+
+//Кожна транзакція це об'єкт з властивостями id, type, amount
+
+const account = {
+  //поточний баланс рахунка
+  balance: 0,
+
+  //Історія транзакцій
+  transactions: [],
+
+  //Метод створює і повертає об'єкт транзакцій
+  //Приймає сумму і тип транзакцій
+  createTransaction(type, amount) {
+    return {
+      type,
+      amount,
+    };
+  },
+
+  //Метод відповідає за додавання сумми к балансу.
+  //Приймає сумму транзакціи.
+  //Визиває createTransaction для створення об'єкта транзакціи
+  //після чого додає його в історію транзакцій
+  deposit(amount) {
+    this.balance += amount;
+    const transaction = this.createTransaction(Transaction.DEPOSIT, amount);
+    // this.transactions.push({ ...transaction, id: Math.random().toFixed(4) });
+    this.transactions.push({ ...transaction, id: 1 });
+  },
+
+  //Метод відповідає за зняття сумми з балансу.
+  //Приймає сумму транзакціи.
+  //Визиває createTransaction для створення об'єкта транзакціи
+  //після чого додає йогого в історю транзакцій
+  //Якщо amount більше ніж поточний баланс, виводимо повідомлення про те,
+  //що недостатньо коштів на рахунку
+  withdraw(amount) {},
+
+  //Метод повертає поточний баланс
+  getBalance() {},
+
+  //Метод шукає і повертає об'єкт транзакціи по id
+  getTransactionDetails(id) {
+    for (const trans of this.transactions) {
+      if (id === trans.id) {
+        return trans;
+      }
+      alert("Транзакція не знайдена");
+    }
+  },
+
+  //Метод повертає кількіств коштів вказаного типу
+  //транзакціи зі всієї історії транзакцій
+  getTransactionType(type) {},
+};
+
+account.deposit(3000);
+console.log(account.getTransactionDetails(4));
+console.log(account);
