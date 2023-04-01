@@ -207,7 +207,7 @@
 //         name = "guest";
 //     }
 //     callback(name);
-    
+
 // }
 
 // function greet(name) {
@@ -222,29 +222,72 @@
 // get getClientData() має повертати об'єкт з переліченими властивостями
 // set changeEmail(newEmail) перезаписує пошту користувача
 
-class Client {
-    #login;
-    #email;
-constructor(login,email){
-    this.#login = login;
-    this.#email = email;
-}
-get getClientData(){
-    return {
-        userLogin: this.#login,
-        userEmail: this.#email,
+// class Client {
+//     #login;
+//     #email;
+// constructor(login,email){
+//     this.#login = login;
+//     this.#email = email;
+// }
+// get getClientData(){
+//     return {
+//         userLogin: this.#login,
+//         userEmail: this.#email,
+//     }
+// }
+// set changeEmail(newEmail){
+//     this.#email = newEmail;
+// }
+// }
+// const user = new Client('Mango', 'ftyhg@gmail.com');
+// console.log(user);
+// console.log(user.getClientData);
+// user.changeEmail = 'gyyyff@gmai.com'
+// console.log(user.getClientData);
+
+
+// 4. Створити клас Worker, у якого є властивості name, age, salary.
+//У класу Worker є метод getSalary, який повертає повідомлення
+//"Worker <name> has salary <salary> dollars"
+//Створити клас TopLevelWorker, у якого є властивість position
+//і який успадковує клас Worker, додаючи метод getPosition
+
+class Worker {
+    constructor(obj) {
+        const { name, age, salary } = obj
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    getSalary() {
+        return `Worker ${this.name} has salary ${this.salary} dollars`;
     }
 }
-set changeEmail(newEmail){
-    this.#email = newEmail;
-}
-}
-const user = new Client('Mango', 'ftyhg@gmail.com');
+
+
+const user = new Worker("Slava", 32, 10400);
 console.log(user);
-console.log(user.getClientData);
-user.changeEmail = 'gyyyff@gmai.com'
-console.log(user.getClientData);
-// Домашка!!!
+console.log(user.getSalary());
+
+
+class TopLevelWorker extends Worker {
+    constructor(obj, position) {
+        super(obj);
+        this.position = position;
+    }
+
+    getPosition() {
+        return `${this.name} work as ${this.position}`;
+    }
+}
+const nadia = { name: "NADIA", age: 42, salary: 1400 }
+const user2 = new TopLevelWorker(nadia, "прибиральник");
+console.log(user2);
+console.log(user2.getPosition());
+
+
+//=================== Домашка!!!
 
 
 //2. Напишіть дві функції
@@ -257,3 +300,10 @@ console.log(user.getClientData);
 //продукта і логірує його в консоль
 
 
+//3. Напиши класс Notes який управляє коллекцієй нотаток у
+//властивості items.
+//Нотатка це  об'єкт з властивостями text, priority
+//Додай класу статичну властивість Priopity,
+//в якій буде зберігатись об'єкт з пріорітетами ("hight", "middle", "low").
+//Додай методи addNote(note), removeNote(text)
+//updatePriority(text, newPriority)
