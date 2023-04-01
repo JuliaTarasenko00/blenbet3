@@ -157,68 +157,68 @@
 //Є об'єкт account в якому необхідно реалізувати
 //методи для работи з балансом та історією транзакцій
 
-//Типів транзакцій всього два.
-//Можна покласти або зняти гроші з рахунка
-const Transaction = {
-  DEPOSIT: "deposit",
-  WITHDRAW: "withdraw",
-};
+// //Типів транзакцій всього два.
+// //Можна покласти або зняти гроші з рахунка
+// const Transaction = {
+//   // DEPOSIT: "deposit",
+//   WITHDRAW: "withdraw",
+// };
 
-//Кожна транзакція це об'єкт з властивостями id, type, amount
+// //Кожна транзакція це об'єкт з властивостями id, type, amount
 
-const account = {
-  //поточний баланс рахунка
-  balance: 0,
+// const account = {
+//   //поточний баланс рахунка
+//   balance: 0,
 
-  //Історія транзакцій
-  transactions: [],
+//   //Історія транзакцій
+//   transactions: [],
 
-  //Метод створює і повертає об'єкт транзакцій
-  //Приймає сумму і тип транзакцій
-  createTransaction(type, amount) {
-    return {
-      type,
-      amount,
-    };
-  },
+//   //Метод створює і повертає об'єкт транзакцій
+//   //Приймає сумму і тип транзакцій
+//   createTransaction(type, amount) {
+//     return {
+//       type,
+//       amount,
+//     };
+//   },
 
-  //Метод відповідає за додавання сумми к балансу.
-  //Приймає сумму транзакціи.
-  //Визиває createTransaction для створення об'єкта транзакціи
-  //після чого додає його в історію транзакцій
-  deposit(amount) {
-    this.balance += amount;
-    const transaction = this.createTransaction(Transaction.DEPOSIT, amount);
-    // this.transactions.push({ ...transaction, id: Math.random().toFixed(4) });
-    this.transactions.push({ ...transaction, id: 1 });
-  },
+//   //Метод відповідає за додавання сумми к балансу.
+//   //Приймає сумму транзакціи.
+//   //Визиває createTransaction для створення об'єкта транзакціи
+//   //після чого додає його в історію транзакцій
+//   deposit(amount) {
+//     this.balance += amount;
+//     const transaction = this.createTransaction(Transaction.DEPOSIT, amount);
+//     // this.transactions.push({ ...transaction, id: Math.random().toFixed(4) });
+//     this.transactions.push({ ...transaction, id: 1 });
+//   },
 
-  //Метод відповідає за зняття сумми з балансу.
-  //Приймає сумму транзакціи.
-  //Визиває createTransaction для створення об'єкта транзакціи
-  //після чого додає йогого в історю транзакцій
-  //Якщо amount більше ніж поточний баланс, виводимо повідомлення про те,
-  //що недостатньо коштів на рахунку
-  withdraw(amount) {},
+//   //Метод відповідає за зняття сумми з балансу.
+//   //Приймає сумму транзакціи.
+//   //Визиває createTransaction для створення об'єкта транзакціи
+//   //після чого додає йогого в історю транзакцій
+//   //Якщо amount більше ніж поточний баланс, виводимо повідомлення про те,
+//   //що недостатньо коштів на рахунку
+//   withdraw(amount) {},
 
-  //Метод повертає поточний баланс
-  getBalance() {},
+//   //Метод повертає поточний баланс
+//   getBalance() {},
 
-  //Метод шукає і повертає об'єкт транзакціи по id
-  getTransactionDetails(id) {
-    for (const trans of this.transactions) {
-      if (id === trans.id) {
-        return trans;
-      }
-      alert("Транзакція не знайдена");
-    }
-  },
+//   //Метод шукає і повертає об'єкт транзакціи по id
+//   getTransactionDetails(id) {
+//     for (const trans of this.transactions) {
+//       if (id === trans.id) {
+//         return trans;
+//       }
+//       alert("Транзакція не знайдена");
+//     }
+//   },
 
-  //Метод повертає кількіств коштів вказаного типу
-  //транзакціи зі всієї історії транзакцій
-  getTransactionType(type) {},
-};
+//   //Метод повертає кількіств коштів вказаного типу
+//   //транзакціи зі всієї історії транзакцій
+//   getTransactionType(type) {},
+// };
 
-account.deposit(3000);
-console.log(account.getTransactionDetails(4));
-console.log(account);
+// account.deposit(3000);
+// console.log(account.getTransactionDetails(4));
+// console.log(account);
