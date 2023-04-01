@@ -181,14 +181,52 @@
 
 // ========================================================
 //Повернути об'єкт у якому вказується кількість тегів
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
 
-const statistic = tweets.flatMap((item) => item.tags).reduce((acc, tag) => ({...acc, [tag]: acc[tag] ? acc[tag] + 1: 1}),{} )
+// const statistic = tweets.flatMap((item) => item.tags).reduce((acc, tag) => ({...acc, [tag]: acc[tag] ? acc[tag] + 1: 1}),{} )
 
-console.log(statistic);
+// console.log(statistic);
+
+//1. Напишіть дві функції
+// letMeSeeYourName(callback) - питає ім'я користувача
+//через prompt и викликає callback функцію
+//greet(name) - коллбек, якій приймає ім'я та логірує в консоль
+//рядок "Привіт, <name>"
+//Реалізуй перевірку, що prompt не пустий
+// якщо пустий - додай дефолтне значення
+
+// function letMeSeeYourName(callback) {
+//     let name = prompt("Enter your name");
+//     if (!name) {
+//         name = "guest";
+//     }
+//     callback(name);
+    
+// }
+
+// function greet(name) {
+//     console.log(`Привіт, ${name}`);
+// }
+// letMeSeeYourName(greet);
+
+
+
+// Домашка!!!
+
+
+//2. Напишіть дві функції
+//makeProduct(name, price, callback) - приймає
+//ім'я та ціну товара, а також callback.
+//Функція створює об'єкт товара, додавая йому унікальний
+//ідентифікатор у властивість id та викликає callback
+//передавая йому створений об'єкт.
+//showProduct(product) - коллбек приймає об'єкт
+//продукта і логірує його в консоль
+
+
