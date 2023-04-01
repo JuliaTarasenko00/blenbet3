@@ -215,8 +215,35 @@
 // }
 // letMeSeeYourName(greet);
 
+// 2. Напиши класс Client який створює об'єкт
+//із властивостями login, email
+//Об'яви приватні властивості #login #email,
+//доступ до яких зроби через геттер и сеттер:
+// get getClientData() має повертати об'єкт з переліченими властивостями
+// set changeEmail(newEmail) перезаписує пошту користувача
 
-
+class Client {
+    #login;
+    #email;
+constructor(login,email){
+    this.#login = login;
+    this.#email = email;
+}
+get getClientData(){
+    return {
+        userLogin: this.#login,
+        userEmail: this.#email,
+    }
+}
+set changeEmail(newEmail){
+    this.#email = newEmail;
+}
+}
+const user = new Client('Mango', 'ftyhg@gmail.com');
+console.log(user);
+console.log(user.getClientData);
+user.changeEmail = 'gyyyff@gmai.com'
+console.log(user.getClientData);
 // Домашка!!!
 
 
