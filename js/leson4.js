@@ -115,15 +115,30 @@
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
-const inputEl = document.querySelector("#passwordInput");
-const btnEl = document.querySelector("#passwordButton");
-btnEl.addEventListener("click", handleClick);
-function handleClick() {
-    if (btnEl.textContent === "Розкрити") {
-        btnEl.textContent = "Приховати";
-        inputEl.style.color = "inherit";
-    } else {
-       btnEl.textContent = "Розкрити";
-       inputEl.style.color = "transparent" 
-    }
-} 
+// const inputEl = document.querySelector("#passwordInput");
+// const btnEl = document.querySelector("#passwordButton");
+// btnEl.addEventListener("click", handleClick);
+// function handleClick() {
+//     if (btnEl.textContent === "Розкрити") {
+//         btnEl.textContent = "Приховати";
+//         inputEl.style.color = "inherit";
+//     } else {
+//        btnEl.textContent = "Розкрити";
+//        inputEl.style.color = "transparent" 
+//     }
+// } 
+
+
+/*
+Завдання 6
+Натиснувши кнопку "Подвоювати", збільшити значення
+у кожному елементі списку у 2 рази
+*/
+
+const btnDouble = document.querySelector('#double');
+const listItems = document.querySelectorAll('.listItem');
+
+btnDouble.addEventListener('click', doubleClick);
+function doubleClick(){
+    listItems.forEach((item) => item.textContent *= 2);
+}
