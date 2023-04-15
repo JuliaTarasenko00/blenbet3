@@ -149,14 +149,42 @@
 При цьому позиція сусідніх кіл має залишатися незмінною.
 */
 
-const circles = document.querySelectorAll(".gridItem");
+// const circles = document.querySelectorAll(".gridItem");
 
-circles.forEach(circle => {
-    circle.addEventListener("mouseenter", () => {
-    circle.classList.add("hide")
-    })
+// circles.forEach(circle => {
+//     circle.addEventListener("mouseenter", () => {
+//     circle.classList.add("hide")
+//     })
 
-    circle.addEventListener("mouseleave", () => {
-    circle.classList.remove("hide")
-    })
-})
+//     circle.addEventListener("mouseleave", () => {
+//     circle.classList.remove("hide")
+//     })
+// })
+
+// Завдання 14
+// Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
+// Додати класи на список eventList, на елементи eventCode та eventKey
+// const eventThumbEl = document.querySelector('.eventThumb');
+// document.addEventListener('keydown', (event) => {
+//   const markup =  `<ul class='eventList'> <li class='eventKey'>key: ${event.key} </li> <li class='eventCode'>code: ${event.code} </li></ul>`;
+//   eventThumbEl.insertAdjacentHTML('afterbegin', markup)
+// console.log(event.code);
+// })
+
+
+
+//--------------------HW----------------------------------
+/*
+Завдання 1
+Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
+*/
+/*
+Завдання 2
+Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
+Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
+*/
+// Завдання 7
+// При затисканні миші на колі коло повинно слідувати за курсором.
+// При відпусканні мишки воно стає в початкове положення.
+// Завдання 11
+// Наведено список людей. Зроби фільтр на ім'я/прізвище.
