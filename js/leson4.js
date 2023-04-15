@@ -124,9 +124,9 @@
 //         inputEl.style.color = "inherit";
 //     } else {
 //        btnEl.textContent = "Розкрити";
-//        inputEl.style.color = "transparent" 
+//        inputEl.style.color = "transparent"
 //     }
-// } 
+// }
 
 
 /*
@@ -135,10 +135,28 @@
 у кожному елементі списку у 2 рази
 */
 
-const btnDouble = document.querySelector('#double');
-const listItems = document.querySelectorAll('.listItem');
+// const btnDouble = document.querySelector('#double');
+// const listItems = document.querySelectorAll('.listItem');
 
-btnDouble.addEventListener('click', doubleClick);
-function doubleClick(){
-    listItems.forEach((item) => item.textContent *= 2);
-}
+// btnDouble.addEventListener('click', doubleClick);
+// function doubleClick(){
+//     listItems.forEach((item) => item.textContent *= 2);
+// }
+
+/*
+Завдання 13
+Коло має зникати при наведенні на нього.
+При цьому позиція сусідніх кіл має залишатися незмінною.
+*/
+
+const circles = document.querySelectorAll(".gridItem");
+
+circles.forEach(circle => {
+    circle.addEventListener("mouseenter", () => {
+    circle.classList.add("hide")
+    })
+
+    circle.addEventListener("mouseleave", () => {
+    circle.classList.remove("hide")
+    })
+})
