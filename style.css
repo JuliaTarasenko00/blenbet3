@@ -1,4 +1,4 @@
-.grid {
+/* .grid {
   display: flex;
   width: 460px;
   height: 460px;
@@ -21,4 +21,26 @@
 .hide {
   background-color: transparent;
   border: 1px dashed transparent;
+} */
+.eventThumb {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.eventList {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.eventKey {
+  color: firebrick;
+}
+
+.eventCode {
+  color: blueviolet;
 }

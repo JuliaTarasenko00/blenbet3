@@ -149,14 +149,24 @@
 При цьому позиція сусідніх кіл має залишатися незмінною.
 */
 
-const circles = document.querySelectorAll(".gridItem");
+// const circles = document.querySelectorAll(".gridItem");
 
-circles.forEach(circle => {
-    circle.addEventListener("mouseenter", () => {
-    circle.classList.add("hide")
-    })
+// circles.forEach(circle => {
+//     circle.addEventListener("mouseenter", () => {
+//     circle.classList.add("hide")
+//     })
 
-    circle.addEventListener("mouseleave", () => {
-    circle.classList.remove("hide")
-    })
-})
+//     circle.addEventListener("mouseleave", () => {
+//     circle.classList.remove("hide")
+//     })
+// })
+
+// Завдання 14
+// Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
+// Додати класи на список eventList, на елементи eventCode та eventKey
+// const eventThumbEl = document.querySelector('.eventThumb');
+// document.addEventListener('keydown', (event) => {
+//   const markup =  `<ul class='eventList'> <li class='eventKey'>key: ${event.key} </li> <li class='eventCode'>code: ${event.code} </li></ul>`;
+//   eventThumbEl.insertAdjacentHTML('afterbegin', markup)
+// console.log(event.code);
+// })
