@@ -188,3 +188,36 @@
 // При відпусканні мишки воно стає в початкове положення.
 // Завдання 11
 // Наведено список людей. Зроби фільтр на ім'я/прізвище.
+
+
+
+//  При натисканні на будь-який рядок у табличці відобразіть
+//  повідомлення з назвою продукту та його ціною.
+//  "Ви вибрали <product> за <price>".
+// const tableEl = document.querySelector('#productTable');
+// const divEl = document.querySelector('#productDetails');
+
+// tableEl.addEventListener('click', onClicTable);
+
+// function onClicTable(ev) {
+
+// if(ev.target.nodeName !== 'TD'){
+//     return
+// };
+// const parent = ev.target.parentNode;
+// const product = parent.firstElementChild.textContent;
+// const price = parent.lastElementChild.textContent;
+
+// divEl.innerHTML = '';
+
+// const markup = `Ви вибрали ${product} за ${price}`
+// divEl.insertAdjacentHTML('afterbegin', markup);
+// }
+
+
+/*
+Завдання 8
+При натисканні на кожну з кнопок підсумовуються значення з data-атрибутів.
+За натисканням на кнопку "Вивести результат" виводиться сума значення, а також статистика з
+інформацією про те, яка кнопка була натиснута скільки разів.
+*/
