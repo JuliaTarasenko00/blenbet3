@@ -46,3 +46,30 @@
 // })
 
 // greetPromise.then((resp) => console.log(resp))
+
+
+//// - Використовуй prompt та повертай значення звідти.
+
+// - Створи функцію, яка буде набувати значення з prompt і всередині якої буде проміс.
+// Якщо значення не є числом, відхиляй проміс та логіруй "error".
+// Якщо значення парне, вирішуй проміс та повертай "even" через 1 секунду.
+// Якщо значення не парне, вирішуй проміс та повертай "odd" через 2 секунди.
+
+let message = prompt('Enter something!');
+function check(message) {
+    return new Promise((resolve, reject) => {
+        message = Number(message);
+        console.log(message);
+        if (Number.isNaN(message)) {
+            reject('error');
+        }
+        if (message % 2 === 0) {
+            setTimeout(() => resolve('even'), 1000);
+        }
+        if (message % 2 !== 0) {
+            setTimeout(() => resolve('odd'), 2000);
+        }
+    })
+    
+}
+check(message).then(response => console.log(response)).catch((er) => console.log(er));
